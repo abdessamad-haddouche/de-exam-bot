@@ -1,0 +1,523 @@
+{
+  "german_exam_types": {
+    "goethe_zertifikat": {
+      "exam_name": "Goethe-Zertifikat",
+      "exam_code": "GOETHE",
+      "description": "Official Goethe-Institut German language certificates",
+      "recognition": "Worldwide recognition, most prestigious",
+      "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+      "typical_price_range_mad": [800, 1800],
+      "exam_format": "Written + Oral",
+      "validity": "Lifetime",
+      "institutions_offering": [
+        "goethe_institut_official",
+        "academie_allemande_casa",
+        "ezplus_multi_city",
+        "institut_franco_allemand",
+        "centre_culturel_allemand_rabat"
+      ]
+    },
+    "goethe_test_pro": {
+      "exam_name": "Goethe-Test PRO",
+      "exam_code": "GOETHE_PRO",
+      "description": "Work-oriented German language exam for professionals",
+      "recognition": "Professional/workplace German certification",
+      "levels": ["A1", "A2", "B1", "B2", "C1"],
+      "typical_price_range_mad": [900, 1600],
+      "exam_format": "Computer-based + Oral",
+      "validity": "2 years",
+      "institutions_offering": [
+        "goethe_institut_official",
+        "ezplus_multi_city"
+      ]
+    },
+    "testdaf": {
+      "exam_name": "TestDaF",
+      "exam_code": "TESTDAF",
+      "description": "Test Deutsch als Fremdsprache - Academic German for university admission",
+      "recognition": "Required for German university admission",
+      "levels": ["TDN 3", "TDN 4", "TDN 5"],
+      "typical_price_range_mad": [1200, 1500],
+      "exam_format": "Computer-based",
+      "validity": "Lifetime",
+      "institutions_offering": [
+        "goethe_institut_official",
+        "studienkolleg_maroco_allemand",
+        "ezplus_multi_city"
+      ]
+    },
+    "osd": {
+      "exam_name": "ÖSD (Österreichisches Sprachdiplom Deutsch)",
+      "exam_code": "OSD",
+      "description": "Austrian German language diplomas",
+      "recognition": "European recognition, Austrian standard",
+      "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+      "typical_price_range_mad": [750, 1650],
+      "exam_format": "Written + Oral",
+      "validity": "Lifetime",
+      "institutions_offering": [
+        "osd_maroc_centres",
+        "ezplus_multi_city",
+        "centre_autrichien_rabat"
+      ]
+    },
+    "telc": {
+      "exam_name": "TELC Deutsch",
+      "exam_code": "TELC",
+      "description": "The European Language Certificates in German",
+      "recognition": "European recognition, business-oriented",
+      "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+      "typical_price_range_mad": [700, 1500],
+      "exam_format": "Written + Oral",
+      "validity": "Lifetime",
+      "institutions_offering": [
+        "academie_allemande_casa",
+        "ezplus_multi_city",
+        "telc_partner_centres",
+        "institut_franco_allemand"
+      ]
+    },
+    "ecl": {
+      "exam_name": "ECL Deutsch",
+      "exam_code": "ECL",
+      "description": "European Consortium for the Certificate of Attainment in Modern Languages",
+      "recognition": "European recognition, less common",
+      "levels": ["A2", "B1", "B2", "C1"],
+      "typical_price_range_mad": [600, 1200],
+      "exam_format": "Written + Oral",
+      "validity": "Lifetime",
+      "institutions_offering": [
+        "ecl_centres_morocco",
+        "ezplus_multi_city"
+      ]
+    }
+  },
+  "institutions": {
+    "goethe_institut_official": {
+      "institution_name": "Goethe-Institut Morocco",
+      "institution_type": "OFFICIAL_INSTITUTE",
+      "homepage_url": "https://www.goethe.de/ins/ma/de/index.html",
+      "exam_types_offered": ["goethe_zertifikat", "goethe_test_pro", "testdaf"],
+      "locations": {
+        "casablanca": {
+          "city": "Casablanca",
+          "center_name": "Goethe-Institut Casablanca",
+          "address": "Boulevard Zerktouni, Casablanca",
+          "phone": "+212 522-207-830",
+          "email": "info-casablanca@goethe.de",
+          "monitoring_pages": [
+            {
+              "url": "https://www.goethe.de/ins/ma/de/spr/prf.html",
+              "description": "Main exam registration page",
+              "target_exams": ["goethe_zertifikat", "goethe_test_pro"],
+              "target_levels": ["A1", "A2", "B1", "B2", "C1", "C2"]
+            },
+            {
+              "url": "https://www.goethe.de/ins/ma/de/spr/prf/testdaf.html",
+              "description": "TestDaF registration page",
+              "target_exams": ["testdaf"],
+              "target_levels": ["TDN 3", "TDN 4", "TDN 5"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://www.goethe.de/ins/ma/de/spr/prf/anm.html",
+            "is_dynamic": true,
+            "url_pattern": "https://www.goethe.de/ins/ma/de/spr/prf/anm/{exam_type}/{session_id}"
+          },
+          "priority": "high",
+          "check_interval_minutes": 15
+        },
+        "rabat": {
+          "city": "Rabat",
+          "center_name": "Goethe-Institut Rabat",
+          "address": "Avenue de la Victoire, Rabat",
+          "phone": "+212 537-708-350",
+          "email": "info-rabat@goethe.de",
+          "monitoring_pages": [
+            {
+              "url": "https://www.goethe.de/ins/ma/de/ver/rab/spr/prf.html",
+              "description": "Rabat exam registration",
+              "target_exams": ["goethe_zertifikat", "goethe_test_pro"],
+              "target_levels": ["A1", "A2", "B1", "B2", "C1", "C2"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://www.goethe.de/ins/ma/de/ver/rab/spr/anm.html",
+            "is_dynamic": true,
+            "url_pattern": "https://www.goethe.de/ins/ma/de/ver/rab/spr/anm/{session_id}"
+          },
+          "priority": "high",
+          "check_interval_minutes": 15
+        }
+      }
+    },
+    "academie_allemande_casa": {
+      "institution_name": "L'Académie Allemande",
+      "institution_type": "PARTNER_CENTRE",
+      "homepage_url": "https://academieallemande.ma/",
+      "exam_types_offered": ["goethe_zertifikat", "telc"],
+      "locations": {
+        "casablanca": {
+          "city": "Casablanca",
+          "center_name": "L'Académie Allemande Casablanca",
+          "address": "Casablanca, Morocco",
+          "phone": "+212 XXX-XXX-XXX",
+          "email": "contact@academieallemande.ma",
+          "monitoring_pages": [
+            {
+              "url": "https://academieallemande.ma/announcements",
+              "description": "Main announcements and exam alerts",
+              "target_exams": ["goethe_zertifikat", "telc"],
+              "target_levels": ["B1", "B2"]
+            },
+            {
+              "url": "https://academieallemande.ma/examens",
+              "description": "Exam calendar and registration",
+              "target_exams": ["goethe_zertifikat", "telc"],
+              "target_levels": ["B1", "B2"]
+            },
+            {
+              "url": "https://academieallemande.ma/goethe-institut",
+              "description": "Goethe exam specific page",
+              "target_exams": ["goethe_zertifikat"],
+              "target_levels": ["B1", "B2"]
+            },
+            {
+              "url": "https://academieallemande.ma/telc-deutsch",
+              "description": "TELC exam specific page",
+              "target_exams": ["telc"],
+              "target_levels": ["B1", "B2"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://academieallemande.ma/inscription",
+            "is_dynamic": false,
+            "url_pattern": null
+          },
+          "priority": "high",
+          "check_interval_minutes": 10
+        }
+      }
+    },
+    "ezplus_multi_city": {
+      "institution_name": "EzPlus Language Centers",
+      "institution_type": "MULTI_CITY_PARTNER",
+      "homepage_url": "https://www.ezplus.ma/",
+      "exam_types_offered": ["goethe_zertifikat", "telc", "osd", "testdaf", "ecl"],
+      "locations": {
+        "multi_city": {
+          "city": "Multiple Cities",
+          "center_name": "EzPlus - All Morocco",
+          "cities_covered": ["Casablanca", "Rabat", "Marrakech", "Fes", "Tangier", "Agadir", "Kenitra", "Meknes"],
+          "phone": "+212 XXX-XXX-XXX",
+          "email": "contact@ezplus.ma",
+          "monitoring_pages": [
+            {
+              "url": "https://www.ezplus.ma/examens-allemand",
+              "description": "All German exams - all cities",
+              "target_exams": ["goethe_zertifikat", "telc", "osd", "testdaf", "ecl"],
+              "target_levels": ["A1", "A2", "B1", "B2", "C1", "C2"]
+            },
+            {
+              "url": "https://www.ezplus.ma/goethe-zertifikat",
+              "description": "Goethe certificate registration",
+              "target_exams": ["goethe_zertifikat"],
+              "target_levels": ["A1", "A2", "B1", "B2", "C1", "C2"]
+            },
+            {
+              "url": "https://www.ezplus.ma/telc-deutsch",
+              "description": "TELC German exam registration",
+              "target_exams": ["telc"],
+              "target_levels": ["A1", "A2", "B1", "B2", "C1", "C2"]
+            },
+            {
+              "url": "https://www.ezplus.ma/testdaf",
+              "description": "TestDaF registration",
+              "target_exams": ["testdaf"],
+              "target_levels": ["TDN 3", "TDN 4", "TDN 5"]
+            },
+            {
+              "url": "https://www.ezplus.ma/centres",
+              "description": "Center locations and availability",
+              "target_exams": ["goethe_zertifikat", "telc", "osd", "testdaf", "ecl"],
+              "target_levels": ["A1", "A2", "B1", "B2", "C1", "C2"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://www.ezplus.ma/inscription-examen",
+            "is_dynamic": true,
+            "url_pattern": "https://www.ezplus.ma/inscription-examen/{city}/{exam_type}/{level}"
+          },
+          "priority": "high",
+          "check_interval_minutes": 12
+        }
+      }
+    },
+    "studienkolleg_maroco_allemand": {
+      "institution_name": "Studienkolleg Maroco-Allemand",
+      "institution_type": "ACADEMIC_CENTRE",
+      "homepage_url": "https://www.studienkolleg-morocco.org/",
+      "exam_types_offered": ["testdaf", "goethe_zertifikat"],
+      "locations": {
+        "tangier": {
+          "city": "Tangier",
+          "center_name": "Studienkolleg Maroco-Allemand Tangier",
+          "address": "Tangier, Morocco",
+          "phone": "+212 539-XXX-XXX",
+          "email": "info@studienkolleg-morocco.org",
+          "monitoring_pages": [
+            {
+              "url": "https://www.studienkolleg-morocco.org/testdaf",
+              "description": "TestDaF registration and information",
+              "target_exams": ["testdaf"],
+              "target_levels": ["TDN 3", "TDN 4", "TDN 5"]
+            },
+            {
+              "url": "https://www.studienkolleg-morocco.org/examens",
+              "description": "All German exams",
+              "target_exams": ["testdaf", "goethe_zertifikat"],
+              "target_levels": ["B2", "C1", "C2", "TDN 3", "TDN 4", "TDN 5"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://www.studienkolleg-morocco.org/inscription",
+            "is_dynamic": false,
+            "url_pattern": null
+          },
+          "priority": "medium",
+          "check_interval_minutes": 20
+        }
+      }
+    },
+    "osd_maroc_centres": {
+      "institution_name": "ÖSD Morocco Centers",
+      "institution_type": "PARTNER_CENTRE",
+      "homepage_url": "https://www.osd.at/en/take-exam/exam-locations/morocco",
+      "exam_types_offered": ["osd"],
+      "locations": {
+        "casablanca": {
+          "city": "Casablanca",
+          "center_name": "ÖSD Center Casablanca",
+          "address": "Casablanca, Morocco",
+          "phone": "+212 522-XXX-XXX",
+          "email": "morocco@osd.at",
+          "monitoring_pages": [
+            {
+              "url": "https://www.osd.at/en/take-exam/register/morocco",
+              "description": "ÖSD exam registration Morocco",
+              "target_exams": ["osd"],
+              "target_levels": ["A1", "A2", "B1", "B2", "C1", "C2"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://register.osd.at/morocco",
+            "is_dynamic": false,
+            "url_pattern": null
+          },
+          "priority": "low",
+          "check_interval_minutes": 30
+        },
+        "rabat": {
+          "city": "Rabat",
+          "center_name": "ÖSD Center Rabat",
+          "address": "Rabat, Morocco",
+          "phone": "+212 537-XXX-XXX",
+          "email": "rabat@osd.at",
+          "monitoring_pages": [
+            {
+              "url": "https://www.osd.at/en/take-exam/register/morocco-rabat",
+              "description": "ÖSD exam registration Rabat",
+              "target_exams": ["osd"],
+              "target_levels": ["A2", "B1", "B2", "C1"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://register.osd.at/morocco/rabat",
+            "is_dynamic": false,
+            "url_pattern": null
+          },
+          "priority": "low",
+          "check_interval_minutes": 35
+        }
+      }
+    },
+    "telc_partner_centres": {
+      "institution_name": "TELC Partner Centers Morocco",
+      "institution_type": "PARTNER_CENTRE",
+      "homepage_url": "https://www.telc.net/pruefungsteilnehmende/pruefungszentren/marokko.html",
+      "exam_types_offered": ["telc"],
+      "locations": {
+        "casablanca": {
+          "city": "Casablanca",
+          "center_name": "TELC Center Casablanca",
+          "address": "Casablanca, Morocco",
+          "phone": "+212 522-XXX-XXX",
+          "email": "morocco@telc.net",
+          "monitoring_pages": [
+            {
+              "url": "https://www.telc.net/pruefungsteilnehmende/anmeldung/marokko-casablanca.html",
+              "description": "TELC Casablanca registration",
+              "target_exams": ["telc"],
+              "target_levels": ["A1", "A2", "B1", "B2", "C1"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://registration.telc.net/morocco/casablanca",
+            "is_dynamic": true,
+            "url_pattern": "https://registration.telc.net/morocco/casablanca/{exam_level}/{date}"
+          },
+          "priority": "medium",
+          "check_interval_minutes": 25
+        }
+      }
+    },
+    "institut_franco_allemand": {
+      "institution_name": "Institut Franco-Allemand",
+      "institution_type": "CULTURAL_CENTRE",
+      "homepage_url": "https://www.ifag-casa.org",
+      "exam_types_offered": ["goethe_zertifikat", "telc"],
+      "locations": {
+        "casablanca": {
+          "city": "Casablanca",
+          "center_name": "Institut Franco-Allemand Casablanca",
+          "address": "Rue Ibn Battouta, Casablanca",
+          "phone": "+212 522-789-456",
+          "email": "contact@ifag-casa.org",
+          "monitoring_pages": [
+            {
+              "url": "https://www.ifag-casa.org/examens-allemand",
+              "description": "German exam registration",
+              "target_exams": ["goethe_zertifikat", "telc"],
+              "target_levels": ["A1", "A2", "B1", "B2"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://www.ifag-casa.org/inscription-examens",
+            "is_dynamic": false,
+            "url_pattern": null
+          },
+          "priority": "low",
+          "check_interval_minutes": 40
+        }
+      }
+    },
+    "ecl_centres_morocco": {
+      "institution_name": "ECL Centers Morocco",
+      "institution_type": "PARTNER_CENTRE",
+      "homepage_url": "https://www.ecl.at/centres/morocco",
+      "exam_types_offered": ["ecl"],
+      "locations": {
+        "casablanca": {
+          "city": "Casablanca",
+          "center_name": "ECL Center Casablanca",
+          "address": "Casablanca, Morocco",
+          "phone": "+212 522-XXX-XXX",
+          "email": "morocco@ecl.at",
+          "monitoring_pages": [
+            {
+              "url": "https://www.ecl.at/register/morocco",
+              "description": "ECL German exam registration",
+              "target_exams": ["ecl"],
+              "target_levels": ["A2", "B1", "B2", "C1"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://register.ecl.at/morocco",
+            "is_dynamic": false,
+            "url_pattern": null
+          },
+          "priority": "low",
+          "check_interval_minutes": 45
+        },
+        "rabat": {
+          "city": "Rabat",
+          "center_name": "ECL Center Rabat",
+          "address": "Rabat, Morocco", 
+          "phone": "+212 537-XXX-XXX",
+          "email": "rabat@ecl.at",
+          "monitoring_pages": [
+            {
+              "url": "https://www.ecl.at/register/morocco-rabat",
+              "description": "ECL German exam registration Rabat",
+              "target_exams": ["ecl"],
+              "target_levels": ["A2", "B1", "B2", "C1"]
+            }
+          ],
+          "registration_details": {
+            "base_url": "https://register.ecl.at/morocco/rabat",
+            "is_dynamic": false,
+            "url_pattern": null
+          },
+          "priority": "low",
+          "check_interval_minutes": 45
+        }
+      }
+    }
+  },
+  "detection_config": {
+    "success_indicators": {
+      "english": ["Registration Open", "Register Now", "Available", "Places available", "Book now", "Apply now", "Enroll now"],
+      "german": ["Anmeldung möglich", "Jetzt anmelden", "Verfügbar", "Plätze verfügbar", "Jetzt buchen", "Anmelden"],
+      "french": ["Inscription ouverte", "S'inscrire maintenant", "Disponible", "Places disponibles", "Réserver maintenant"],
+      "arabic": ["التسجيل مفتوح", "سجل الآن", "متاح", "أماكن متاحة"],
+      "css_classes": [".registration-active", ".register-open", ".available", ".inscription-ouverte", ".anmeldung-offen"]
+    },
+    "closed_indicators": {
+      "english": ["Registration Closed", "Fully Booked", "No places available", "Sold out", "Registration ended"],
+      "german": ["Anmeldung geschlossen", "Ausgebucht", "Keine Plätze verfügbar", "Vollbesetzt", "Anmeldeschluss"],
+      "french": ["Inscription fermée", "Complet", "Aucune place disponible", "Épuisé"],
+      "arabic": ["التسجيل مغلق", "ممتلئ", "لا توجد أماكن متاحة"],
+      "css_classes": [".registration-closed", ".register-closed", ".unavailable", ".inscription-fermee", ".anmeldung-geschlossen"]
+    },
+    "monitoring_selectors": {
+      "registration_buttons": [
+        "button[class*='register']", 
+        "a[href*='anmeld']", 
+        "a[href*='inscription']",
+        "a[href*='register']",
+        ".registration-btn", 
+        ".anmeldung-btn", 
+        ".btn-inscription",
+        ".register-now",
+        ".jetzt-anmelden",
+        ".btn-register"
+      ],
+      "availability_text": [
+        ".availability-status", 
+        ".exam-status", 
+        ".prüfungsstatus",
+        ".statut-inscription",
+        ".registration-status",
+        ".exam-availability"
+      ],
+      "exam_dates": [
+        ".exam-date", 
+        ".prüfungstermin", 
+        ".exam-schedule",
+        ".dates-examens",
+        ".exam-calendar",
+        ".termine",
+        ".dates"
+      ]
+    }
+  },
+  "schedule_patterns": {
+    "typical_registration_days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+    "typical_registration_times": ["08:00", "09:00", "10:00", "13:00", "14:00", "15:00"],
+    "timezone": "Africa/Casablanca",
+    "advance_notice_days": 5,
+    "registration_window_hours": 72,
+    "peak_registration_months": ["September", "October", "January", "February", "March", "June"]
+  },
+  "global_settings": {
+    "high_priority_check_minutes": 10,
+    "medium_priority_check_minutes": 20,
+    "low_priority_check_minutes": 35,
+    "max_concurrent_monitors": 12,
+    "screenshot_on_detection": true,
+    "notification_cooldown_minutes": 15,
+    "retry_failed_requests": 3,
+    "request_timeout_seconds": 30,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+  }
+}
