@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env python3
+>>>>>>> 2cdb6f8 (Last changes)
 """Runner script with proper path setup"""
 import sys
 from pathlib import Path

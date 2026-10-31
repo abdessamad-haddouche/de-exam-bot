@@ -49,5 +49,9 @@ class Config:
     
     @property
     def headless_mode(self) -> bool:
+<<<<<<< HEAD
         env_value = os.getenv('HEADLESS_MODE', str(self.data['browser_defaults']['headless'])).lower()
         return env_value == 'true'
+=======
+        return os.getenv('HEADLESS_MODE', 'true').lower() == 'false'
+>>>>>>> 2cdb6f8 (Last changes)

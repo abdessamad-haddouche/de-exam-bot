@@ -1,9 +1,16 @@
 {
   "drivers": {
+<<<<<<< HEAD
     "default_cache_path": "./selenium-drivers",
     "cache_valid_days": 7,
     "auto_update": true,
     "supported_browsers": ["chrome", "firefox"]
+=======
+    "default_cache_path": "./drivers",
+    "cache_valid_days": 7,
+    "auto_update": true,
+    "supported_browsers": ["chrome", "firefox", "edge"]
+>>>>>>> 2cdb6f8 (Last changes)
   },
   "browser_defaults": {
     "default_browser": "chrome",

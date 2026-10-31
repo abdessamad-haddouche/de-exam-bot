@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 """
 German Exam Registration Bot - Main Application
 """
 import sys
 import json
+=======
+#!/usr/bin/env python3
+"""
+Main entry point for the German Exam Registration Bot
+"""
+import sys
+>>>>>>> 2cdb6f8 (Last changes)
 from pathlib import Path
 
 # Add src to Python path
@@ -11,6 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 import logging
 from de_exam_bot.driver_manager import DriverManager
 from de_exam_bot.config import Config
+<<<<<<< HEAD
 from de_exam_bot.processing import ContentProcessor, ProcessedContent
 
 def setup_logging():
@@ -18,15 +27,25 @@ def setup_logging():
     log_dir = Path('logs')
     log_dir.mkdir(exist_ok=True)
     
+=======
+
+def setup_logging():
+    """Setup logging configuration"""
+>>>>>>> 2cdb6f8 (Last changes)
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
+<<<<<<< HEAD
             logging.FileHandler('logs/exam_bot.log'),
+=======
+            logging.FileHandler('logs/app.log'),
+>>>>>>> 2cdb6f8 (Last changes)
             logging.StreamHandler()
         ]
     )
 
+<<<<<<< HEAD
 def test_content_processor(driver, url: str):
     """Test the ContentProcessor functionality"""
     print(f"\n🔍 Testing ContentProcessor on: {url}")
@@ -216,11 +235,17 @@ def main():
     
     print("🎯 German Exam Registration Bot - ContentProcessor Test")
     print("=" * 60)
+=======
+def test_driver_setup():
+    """Test driver installation and basic functionality"""
+    print("🚀 Testing driver setup...")
+>>>>>>> 2cdb6f8 (Last changes)
     
     config = Config()
     dm = DriverManager()
     
     try:
+<<<<<<< HEAD
         print(f"Using browser: {config.default_browser}")
         driver = dm.get_driver()
         print("✅ WebDriver initialized successfully")
@@ -263,6 +288,43 @@ def main():
             print("🧹 Cleanup completed")
         except Exception:
             print("🧹 Cleanup completed (with minor issues)")
+=======
+        # Test default browser from config
+        print(f"Using browser: {config.default_browser}")
+        print(f"Headless mode: {config.headless_mode}")
+        
+        driver = dm.get_driver()
+        print("✅ Driver created successfully!")
+        
+        # Test basic navigation
+        driver.get("https://www.google.com")
+        print(f"✅ Page loaded: {driver.title}")
+        
+        # Test different browser
+        dm.close_driver()
+        print("✅ Driver closed successfully!")
+        
+    except Exception as e:
+        print(f"❌ Error: {e}")
+    finally:
+        dm.close_driver()
+
+def main():
+    """Main application entry point"""
+    setup_logging()
+    
+    print("🎯 German Exam Registration Bot")
+    print("=" * 40)
+    
+    # For now, just test the driver setup
+    test_driver_setup()
+    
+    # TODO: Add actual monitoring logic
+    print("\n📋 TODO:")
+    print("- Website monitoring")
+    print("- Form filling")
+    print("- Notifications")
+>>>>>>> 2cdb6f8 (Last changes)
 
 if __name__ == "__main__":
     main()
